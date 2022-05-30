@@ -1,0 +1,17 @@
+baseURL = "http://example.org/"
+languageCode = "en-gb"
+title = "AIN UI Guidelines"
+
+# Enable for syntax highlighting
+pygmentsUseClasses = true
+# Enable highlighting for code fences
+pygmentsCodeFences = true
+# pygmentsCodefencesGuessSyntax = true
+
+
+[author]
+  name = "Harry Cresswell"
+  website = "https://harrycresswell.com/"
+  twitter = "https://twitter.com/harrycresswell"
+  github = "https://github.com/harrycresswell"
+  linkedin = "https://linkedin.com/in/harrycresswell/"
