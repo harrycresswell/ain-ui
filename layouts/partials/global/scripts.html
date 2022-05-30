@@ -1,0 +1,7 @@
+<!-- Load JS files independently -->
+{{ $copyCodeBlock := resources.Get "js/copy-code.js" }}
+<!-- Concat JS and generate app.js, force cache refresh -->
+{{ $scripts := slice $copyCodeBlock | resources.Concat "app.js" }}
+{{ $global := $scripts | resources.Minify }}
+<!-- Load app.js and authenticate of hashed file -->
+<script type="text/javascript" src="{{ $global.Permalink }}" media="screen"></script>

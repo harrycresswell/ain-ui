@@ -1,0 +1,12 @@
+<header role="banner" class="lg:h-screen lg:sticky top-0 lg:overflow-auto lg:mr-0 lg:min-w-[15vw] lg:pl-10 pt-5 lg:pt-10" role="banner">
+ <div class="flex items-center justify-between w-full px-3 mx-auto lg:px-4">
+   {{ $brand := "#2563EB" }}
+   {{ $dark := "#333333" }}
+   <a class="flex gap-2" href="/">
+    {{ partial "svg/logomark.html" (dict "fill" $brand "size" "48") }}
+    {{ partial "svg/logotype.html" (dict "fill" $dark "width" "93" "height" "48") }}
+    <span class="sr-only">{{ .Site.Title }}</span>
+   </a>
+ </div>
+ {{ partial "global/nav.html" . }}
+</header>

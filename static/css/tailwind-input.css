@@ -1,0 +1,41 @@
+@tailwind base;
+
+@layer base {
+
+ /* For reference: https://tailwindcss.com/docs/adding-base-styles#using-css */
+ h1,
+ h2,
+ h3,
+ h4 {
+  @apply font-bold;
+  @apply text-gray-800;
+  @apply mb-6;
+ }
+
+ h1 {
+  @apply text-5xl;
+  @apply mb-12;
+ }
+
+ h2 {
+  @apply text-3xl;
+  @apply mt-12;
+ }
+
+ h3 {
+  @apply text-2xl;
+ }
+
+ h4 {
+  @apply text-xl;
+ }
+
+ p {
+  @apply text-gray-700;
+  @apply text-lg;
+ }
+}
+
+
+@tailwind components;
+@tailwind utilities;

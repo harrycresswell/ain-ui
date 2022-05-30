@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article class="">
+  <h1>{{ .Title }}</h1>
+ </header>
+ <div>
+  {{ .Content | safeHTML }}
+  {{ range .RegularPages }}
+   <a href="{{ .Permalink }}">{{ .Title }}</a>
+  {{ end }}
+ </div>
+</article>
+<header>
+{{ end }}

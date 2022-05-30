@@ -1,0 +1,41 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+# Enable for syntax highlighting
+pygmentsUseClasses = true
+# Enable highlighting for code fences
+pygmentsCodeFences = true
+# pygmentsCodefencesGuessSyntax = true
+
+[menu]
+[[menu.main]]
+  pageRef = "/components"
+  name = "Components"
+  url = "/components/"
+  weight = 1
+[[menu.main]]
+  pageRef = "/components/alert"
+  name = "Alert"
+  url = "/components/alert/"
+  weight = 2
+  parent = "Components"
+[[menu.main]]
+  pageRef = "/components/accordion"
+  name = "Accordion"
+  url = "/components/accordion/"
+  weight = 2
+  parent = "Components"
+[[menu.main]]
+  pageRef = "/components/avatar"
+  name = "Avatar"
+  url = "/components/avatar/"
+  weight = 2
+  parent = "Components"
+[[menu.main]]
+  pageRef = "/components/button"
+  name = "Button"
+  url = "/components/button/"
+  weight = 2
+  parent = "Components"
+

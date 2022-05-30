@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="lg:flex gap-12 lg:w-full">
+	<div class="lg:flex-auto lg:max-w-4xl">
+		<header>
+			<h1>{{ .Title }}</h1>
+		</header>
+		{{ with .Content | safeHTML }}
+			<section>
+			{{ partial "global/heading-anchor.html" . }}
+			</section>
+		{{ end }}
+	</div>
+	{{ partial "global/toc.html" . }}
+</article>
+{{ end }}

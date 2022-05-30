@@ -1,0 +1,27 @@
+<nav class="pt-12 px-3 lg:px-0 lg:pl-3" aria-label="Main Navigation">
+ <ul>
+		{{ $currentPage := . }}
+			{{ range .Site.Menus.main }}
+				<li>
+					<a 
+						class="block font-semibold text-lg text-gray-800 p-2 {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}text-blue-600 bg-blue-50{{ end }}" 
+						href="{{ .URL }}">
+						{{ .Name }}
+					</a>
+					{{ if .HasChildren }}
+						<ul>
+								{{ range .Children }}
+									<li class="my-4">
+											<a 
+												class="text-lg text-gray-700 p-2 {{ if $currentPage.IsMenuCurrent "main" . }}font-semibold{{ end }}" 
+												href="{{ .URL }}">
+												{{ .Name }}
+											</a>
+									</li>
+								{{ end }}
+						</ul>	
+					{{ end }}
+				</li>
+			{{ end }}
+	</ul>
+</nav>

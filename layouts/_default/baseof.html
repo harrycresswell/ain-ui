@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
+  {{- partial "global/head.html" . -}}
+	<body class="h-screen">
+    <a class="h-auto m-0 p-0 w-0 overflow-hidden whitespace-nowrap absolute focus:absolute focus:z-20 focus:top-20 focus:right-20" href="#main">Skip to main content</a>
+    <div class="lg:flex gap-12">
+      {{- partial "global/site-head.html" . -}}
+      <main id="main" class="w-full px-3 lg:px-0 lg:pt-10">
+        {{- block "main" . }}{{- end }}
+      </main>
+    </div>
+    {{- partial "global/scripts.html" . -}}
+    {{- partialCached "alert.html" . -}}
+	</body>
+</html>
